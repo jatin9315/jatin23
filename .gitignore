@@ -1,32 +1,29 @@
-# Prerequisites
-*.d
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdlib.h>
+#include<stdbool.h>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+void show()
+{
+    int a,b,c;
+    for(a=1; a<333; a++)
+    {
+        for(c=333; c<500; c++)
+        {
+            b=1000-a-c;
+            if(a*a+b*b==c*c)
+            {
+                printf("%d\n",a*b*c);
+                return;
+            }
+        }
+    }
+}
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+int main()
+{
+    show();
+    return 0;
+}
